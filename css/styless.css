@@ -1,0 +1,44 @@
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    margin-right: 30px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: black;
+}
+
+
+.main-nav {
+    display: flex;
+    margin-right: 100px;
+}
+
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    color: white;
+    padding-left: 10px;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+
+.container {
+    width: 90vw;
+    height: 60vh;
+    border: 2px red solid;
+    margin: auto;
+}

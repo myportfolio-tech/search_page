@@ -28,7 +28,7 @@
     padding-left: 10px;
     list-style: none;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 
@@ -36,6 +36,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+}
+
+.menu-container {
+    height: 25px;
+    padding: 10px;
 }
 
 
@@ -54,6 +59,5 @@
 
 .active a:link{
     background-color: white;
-    font-size: 2rem;
     color: violet;
 }

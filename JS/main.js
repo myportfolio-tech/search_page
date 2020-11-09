@@ -1,9 +1,9 @@
 // get all class 'container' elements.
 // Loop and add <a> item within <li> item. 
 
-function createLi() {
+function createLiElements() {
     const containers = document.getElementsByClassName('container');
-    const menuUL = document.getElementById('menu');
+    const menuUL = document.getElementById('main-ul');
     
     for(const cont of containers )
         {
@@ -17,4 +17,12 @@ function createLi() {
 }
 
 
-createLi()
+createLiElements()
+
+const navvItems = document.getElementById('main-ul');
+
+
+for(const item of navvItems.children) 
+    {
+        console.log(item.getElementsByTagName('a')[0])
+    }

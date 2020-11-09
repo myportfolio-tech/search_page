@@ -12,7 +12,7 @@ function createLiElements() {
         
             let liItem = document.createElement('li');
             liItem.className = "nav-item";
-            liItem.innerHTML = `<div class="menu-container"><a href="#${cont.id}">${cont.id}</a></div>`;  
+            liItem.innerHTML = `<div class="menu-container" id="${cont.id}"><a href="#${cont.id}">${cont.id}</a></div>`;  
             menuUL.appendChild(liItem);
         }
 
@@ -45,10 +45,20 @@ function displayContainerInfo()
 
         {
             const props = cont.getBoundingClientRect();
-
             console.log(cont.id)
             console.log(props.y);
-            console.log(`${cont.id} is on top: ${isOnTop(props.y)}`)
+            console.log(`${cont.id} is on top: ${isOnTop(props.y)}`);
+            if (isOnTop(props.y)) 
+                {
+                    const elem = document.getElementById(cont.id)
+                    console.log(elem)
+                    elem.classList.add("active")
+                }
+            else
+                {
+                    const elem = document.getElementById(cont.id)
+                    elem.classList.remove("active")
+                }
         }
 
     }
@@ -62,10 +72,10 @@ document.addEventListener('scroll', function() {
 
 
 
-// const navvItems = document.getElementById('main-ul');
+const navvItems = document.getElementById('main-ul');
 
 
-// for(const item of navvItems.children) 
-//     {
-//         console.log(item.getElementsByTagName('a')[0])
-//     }
+for(const item of navvItems.children) 
+    {
+        console.log(item.getElementsByTagName('a')[0])
+    }

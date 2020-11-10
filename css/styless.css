@@ -44,7 +44,7 @@
 }
 
 
-.container {
+.section {
     width: 90vw;
     height: 60vh;
     border: 2px red solid;
@@ -57,7 +57,12 @@
 }
 
 
-.active a:link{
+.active {
     background-color: white;
     color: violet;
+}
+
+
+.active-menu {
+    background-color: violet;
 }

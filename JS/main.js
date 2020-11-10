@@ -55,10 +55,12 @@ function getMenuLiElement(matchedID)
                     {
                         console.log(item.firstChild.innerHTML);
                         item.firstChild.classList.add("active-menu");
+                        item.firstChild.style.color = "#000839";
                     }
                 else
                     {
                         item.firstChild.classList.remove("active-menu");
+                        item.firstChild.style.color = 'rgba(0, 168, 204, .5)';
                     } 
 
             }
@@ -78,6 +80,7 @@ function displayContainerInfo()
 
         {
             const props = cont.getBoundingClientRect();
+            console.log(props);
             if (isOnTop(props.y)) 
                 {
                     const elem = document.getElementById(cont.id);

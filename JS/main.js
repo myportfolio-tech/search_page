@@ -1,32 +1,44 @@
-// get all class 'container' elements.
-// Loop and add <a> item within <li> item. 
+
+// select the "banner" <div>
+// select all <section> as they all have a class of "section"
+//return array of IDs
+
+function getMenuCLassesIDs()
+    {
+        let IdsArray = [];
+        const elements = document.querySelectorAll('.banner,.section');
+        for(const elm of elements)
+            {
+                IdsArray.push(elm.id);
+            }
+        
+        return IdsArray;
+    };
 
 
+//iterate through the IdsArray and create and append <li> items
 
-function createLiElements() {
-    
-    // select all <section> as they all have a class of "section"
-    const containers = document.getElementsByClassName('section');
+function createLiElements(meunItems) {
     
     // select the <ul> element already in the menu. it has class of "main-ul"
     const menuUL = document.getElementById('main-ul');
 
-    // Create and append an <li> item with an <a> element in it.
+    // Create and append an <li> item with a <a> tag in it.
     // Append it to the <ul> element
 
-    for(const cont of containers )
+    for(const item of meunItems)
         {
+            console.log(item);
             let liItem = document.createElement('li');
             liItem.className = "nav-item";
-            // liItem.innerHTML = `<div class="menu-container" id="${cont.id}"><a href="#${cont.id}">${cont.id}</a></div>`;  
-            
+
             //use the container id to create an anchor
-            liItem.innerHTML = `<a href="#${cont.id}">${cont.id}</a>`;  
+            liItem.innerHTML = `<a href="#${item}">${item}</a>`;  
             menuUL.appendChild(liItem);
         }
 }
 
-createLiElements()
+
 
 // Determine if a <container> is in the main display range 
 
@@ -46,7 +58,7 @@ function isOnTop(yprop)
 function getMenuLiElement(matchedID)
     {
         //get all <li> under the <ul> element
-        const menuListItems = document.getElementsByClassName("nav-item");             
+        const menuListItems = document.getElementsByClassName("nav-item");           
         
         //get the text in the <a> element
         for(const item of menuListItems)
@@ -64,8 +76,19 @@ function getMenuLiElement(matchedID)
                     } 
 
             }
-    }
+    };
 
+
+//This functions finds the first <li> item in the navigation, the home tab, 
+//and sets it active by default.
+
+function InitialHomeMenuState()
+    {
+        homeMenuLi = document.getElementsByClassName("nav-item");
+        console.log(homeMenuLi)
+        homeMenuLi[0].firstChild.classList.add("active-menu");
+        homeMenuLi[0].firstChild.style.color = "#000839";
+    };
 
 
 
@@ -74,20 +97,19 @@ function getMenuLiElement(matchedID)
 
 function displayContainerInfo()
     {
-    const containers = document.getElementsByClassName('section');
+    const containers = document.querySelectorAll('.banner,.section')
     console.clear();
     for(let cont of containers)
-
         {
             const props = cont.getBoundingClientRect();
             console.log(props);
             if (isOnTop(props.y)) 
                 {
                     const elem = document.getElementById(cont.id);
-                    console.log(elem);
+                    // console.log(elem);
                     elem.classList.add("active");
                     getMenuLiElement(cont.id);
-
+                    break;
 
                 }
             else
@@ -107,4 +129,8 @@ document.addEventListener('scroll', function() {
 
 
 // CALL FUNCTIONS //
+
+const meunItems = getMenuCLassesIDs();
+createLiElements(meunItems);
+InitialHomeMenuState();
 

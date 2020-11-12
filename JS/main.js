@@ -109,7 +109,7 @@ function displayContainerInfo()
                     // console.log(elem);
                     elem.classList.add("active");
                     getMenuLiElement(cont.id);
-                    break;
+                    // break;
 
                 }
             else

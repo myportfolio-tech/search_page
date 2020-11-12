@@ -91,12 +91,8 @@ body {
     stroke: var(--dark-blue);
     stroke-width: 10px;
 }
-/* 
-.banner-text svg:hover {
-    fill: var(--orange);
-    stroke: red;
-    stroke-width: 10px;
-} */
+
+
 /* ### SECTION ### */
 
 
@@ -119,16 +115,23 @@ body {
 
 
 .site-footer {
+
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: 50px;
     margin: auto;
     align-items: center;
-    max-width: 1200px;
+    width: 100vw;
+    background-color: var(--dark-blue);
 
 }
 
+.site-footer a {
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 1.2rem;
 
+}
 
 
 .text-image {

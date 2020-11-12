@@ -79,8 +79,20 @@ body {
     font-size: 2rem;
 }
 
+.banner-text {
+    display: flex;
+    align-content: space-between;
+}
 
+.banner-text svg{
+    width: 200px;
+    fill: var(--med-blue);
+    margin: 0 50px 0 50px;
+}
 
+.banner-text svg:hover {
+    fill: var(--orange);
+}
 /* ### SECTION ### */
 
 

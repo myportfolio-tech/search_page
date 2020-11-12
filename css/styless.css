@@ -15,18 +15,6 @@ body {
 }
 
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: auto;
-
-}
-
-/* .menu-container {
-    height: 25px;
-    padding: 10px;
-} */
 
 .main-header {
     display: flex;
@@ -36,14 +24,19 @@ body {
     overflow: hidden;
     position: fixed;
     top: 0;
-
     background-color: var(--dark-blue);
+
 }
 
 
 .main-nav {
     display: flex;
     margin-right: 50px;
+    width: 600px;
+    background-color: white;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--dark-blue);
 }
 
 

@@ -33,7 +33,6 @@ body {
     display: flex;
     margin-right: 50px;
     width: 600px;
-    background-color: white;
     align-items: center;
     justify-content: flex-end;
     background-color: var(--dark-blue);
@@ -46,12 +45,15 @@ body {
     margin: 0;
 }
 
-.main-nav li a{
+.main-nav li button{
+    background-color: var(--dark-blue);
     color: #a6a6a4;
     padding: 0 10px 0 10px;
     list-style: none;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
 }
 
 /* ### MAIN BANNER ### */
@@ -191,10 +193,14 @@ body {
 
 
 .active {
-    color: var(--dark-blue);
+    color: var(--orange)
     transition: color 2s;
     transition: fill 2s;
 }
+
+/* .active button {
+    color: var(--orange);
+} */
 
 
 .active img {
@@ -214,8 +220,12 @@ body {
 
 .active-menu {
     background-color: var(--orange);
+
 }
 
+.active-menu button {
+    color: var(--orange);
+}
 
 
 @media (max-width: 900px) 

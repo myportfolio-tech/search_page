@@ -16,6 +16,16 @@ function getMenuCLassesIDs()
     };
 
 
+
+
+
+
+function scrolltoSection(sectioId)
+    {
+        elm = document.getElementById(sectioId);
+        elm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
 //iterate through the IdsArray and create and append <li> items
 
 function createLiElements(meunItems) {
@@ -32,8 +42,17 @@ function createLiElements(meunItems) {
             let liItem = document.createElement('li');
             liItem.className = "nav-item";
 
+            let btn = document.createElement('button');
+            btn.innerHTML =`${item}`;
+            btn.addEventListener('click', function()
+                {
+                    scrolltoSection(item);
+                });
+            
+            liItem.appendChild(btn);
             //use the container id to create an anchor
-            liItem.innerHTML = `<a href="#${item}">${item}</a>`;  
+            // liItem.innerHTML = `<button>${item}</button>`;  
+            // liItem.innerHTML = `${item}`;  
             menuUL.appendChild(liItem);
         }
 }
@@ -86,8 +105,8 @@ function InitialHomeMenuState()
     {
         homeMenuLi = document.getElementsByClassName("nav-item");
         console.log(homeMenuLi)
-        homeMenuLi[0].firstChild.classList.add("active-menu");
-        homeMenuLi[0].firstChild.style.color = "#000839";
+        homeMenuLi[0].classList.add("active-menu");
+        homeMenuLi[0].style.color = "#000839";
     };
 
 
@@ -133,4 +152,5 @@ document.addEventListener('scroll', function() {
 const meunItems = getMenuCLassesIDs();
 createLiElements(meunItems);
 InitialHomeMenuState();
+
 

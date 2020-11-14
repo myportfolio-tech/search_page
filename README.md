@@ -111,3 +111,34 @@ document.addEventListener('scroll', function() {displayContainerInfo();});
 ```
 
 
+## CSS Classes Overview
+
+A set of classes control ```active``` and ```inactive``` elements.
+The menu tabs are formatted using the classes
+
+```css
+.inactive-btn { }
+
+.active-btn { }
+```
+
+The container look is control by the class and pseudo-selectors:
+
+
+```css
+.active{ }
+
+.active img { }
+
+.active h2 { }
+
+
+.active svg { } 
+```
+
+
+## What's Next?
+
+Although not part of the assignment, I want to animate the SVG image so it highlits the contour of the map as the page loads.
+No idea how to do that but that's why we are here.
+:cold_sweat:

@@ -105,8 +105,10 @@ function InitialHomeMenuState()
     {
         homeMenuLi = document.getElementsByClassName("nav-item");
         // console.log(homeMenuLi)
-        homeMenuLi[0].classList.add("active-menu");
-        homeMenuLi[0].style.color = "#000839";
+
+        homeMenuLi[0].lastChild.classList.remove("inactive-btn");
+        homeMenuLi[0].lastChild.classList.add("active-btn");
+
     };
 
 

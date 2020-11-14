@@ -61,7 +61,7 @@ function createLiElements(meunItems) {
 
 function isOnTop(yprop) 
     {
-        if(yprop > -100 && yprop < 250 )
+        if(yprop > -50 && yprop < 200 )
         {
             return true;
         }

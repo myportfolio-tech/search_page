@@ -53,6 +53,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 300px;
+    margin: auto;
     margin-top: 60px;
     align-items: center;
     max-width: 1200px;
@@ -73,7 +74,9 @@ body {
 
 .banner-text {
     display: flex;
-    align-content: space-between;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .banner-text svg{
@@ -107,12 +110,11 @@ body {
 
 
 .site-footer {
-
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 100px;
     margin: auto;
-    align-items: center;
+    align-items: space-around;
     width: 100vw;
     background-color: var(--dark-blue);
 
@@ -166,7 +168,7 @@ body {
     color:rgba(0, 8, 57, .4);
     transition: background-color 2s;
     width: 80%;
-    height: 60vh;
+    height: 400px;
     max-width: 1200px;
     margin-bottom: 50px;
 

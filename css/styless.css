@@ -42,19 +42,9 @@ body {
 .main-nav ul {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 0 30px 0 30px;
 }
 
-.main-nav li button{
-    background-color: var(--dark-blue);
-    /* color: var(--light-blue); */
-    padding: 0 10px 0 10px;
-    list-style: none;
-    text-decoration: none;
-    font-size: 2rem;
-    border: none;
-    cursor: pointer;
-}
 
 /* ### MAIN BANNER ### */
 
@@ -191,16 +181,37 @@ body {
 
 /* ###  ACTIVE  ###*/
 
+.inactive-btn 
+    {
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    padding: 0 10px 0 10px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    }
 
-.active {
+.active-btn 
+    {
+    background-color: var(--orange);
+    color: var(--dark-blue);
+    padding: 0 10px 0 10px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    }
+
+
+.active{
     color: var(--dark-blue);   
     transition: color 2s;
     transition: fill 2s;
 }
 
-/* .active button {
-    color: var(--orange);
-}  */
 
 
 .active img {
@@ -220,12 +231,10 @@ body {
 
 .active-menu {
     background-color: var(--orange);
+    color: #000839;
 
 }
 
-.active-menu{
-    color: var(--orange);
-}
 
 
 @media (max-width: 900px) 

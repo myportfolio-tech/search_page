@@ -44,6 +44,7 @@ function createLiElements(meunItems) {
 
             let btn = document.createElement('button');
             btn.innerHTML =`${item}`;
+            btn.className = "inactive-btn";
             btn.addEventListener('click', function()
                 {
                     scrolltoSection(item);
@@ -82,14 +83,14 @@ function getMenuLiElement(matchedID)
                 if (matchedID == item.lastChild.innerHTML)
                     {
                         console.log(item.firstChild.innerHTML);
-                        item.lastChild.classList.remove("inactive-menu");
-                        item.lastChild.classList.add("active-menu");
+                        item.lastChild.classList.remove("inactive-btn");
+                        item.lastChild.classList.add("active-btn");
 
                     }
                 else
                     {
-                        item.lastChild.classList.remove("active-menu");
-                        item.lastChild.classList.add("inactive-menu");
+                        item.lastChild.classList.remove("active-btn");
+                        item.lastChild.classList.add("inactive-btn");
                         
                     } 
 

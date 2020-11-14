@@ -50,9 +50,6 @@ function createLiElements(meunItems) {
                 });
             
             liItem.appendChild(btn);
-            //use the container id to create an anchor
-            // liItem.innerHTML = `<button>${item}</button>`;  
-            // liItem.innerHTML = `${item}`;  
             menuUL.appendChild(liItem);
         }
 }
@@ -82,16 +79,18 @@ function getMenuLiElement(matchedID)
         //get the text in the <a> element
         for(const item of menuListItems)
             {
-                if (matchedID == item.firstChild.innerHTML)
+                if (matchedID == item.lastChild.innerHTML)
                     {
                         console.log(item.firstChild.innerHTML);
-                        item.firstChild.classList.add("active-menu");
-                        item.firstChild.style.color = "#000839";
+                        item.lastChild.classList.remove("inactive-menu");
+                        item.lastChild.classList.add("active-menu");
+
                     }
                 else
                     {
-                        item.firstChild.classList.remove("active-menu");
-                        item.firstChild.style.color = 'rgba(0, 168, 204, .5)';
+                        item.lastChild.classList.remove("active-menu");
+                        item.lastChild.classList.add("inactive-menu");
+                        
                     } 
 
             }
@@ -104,7 +103,7 @@ function getMenuLiElement(matchedID)
 function InitialHomeMenuState()
     {
         homeMenuLi = document.getElementsByClassName("nav-item");
-        console.log(homeMenuLi)
+        // console.log(homeMenuLi)
         homeMenuLi[0].classList.add("active-menu");
         homeMenuLi[0].style.color = "#000839";
     };

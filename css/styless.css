@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 :root {
-    --light-blue: rgba(0, 168, 204, .05);
+    --light-blue: rgba(0, 168, 204, .1);
     --med-blue: rgb(0, 80, 130, .2);
     --dark-blue: rgb(0, 8, 57);
     --orange: #ffa41b;
@@ -47,7 +47,7 @@ body {
 
 .main-nav li button{
     background-color: var(--dark-blue);
-    color: #a6a6a4;
+    /* color: var(--light-blue); */
     padding: 0 10px 0 10px;
     list-style: none;
     text-decoration: none;
@@ -193,14 +193,14 @@ body {
 
 
 .active {
-    color: var(--orange)
+    color: var(--dark-blue);   
     transition: color 2s;
     transition: fill 2s;
 }
 
 /* .active button {
     color: var(--orange);
-} */
+}  */
 
 
 .active img {
@@ -223,7 +223,7 @@ body {
 
 }
 
-.active-menu button {
+.active-menu{
     color: var(--orange);
 }
 

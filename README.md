@@ -2,7 +2,10 @@
 
 A landing page that uses JavaScript to create and style elements
 
-## JS Functions
+## Live Page
+https://myportfolio-tech.github.io/search_page/
+
+### JS Functions
 
 ```js
 
